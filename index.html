@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research Scout</title>
-<meta name="description" content="클론식물 세계모델·조경BIM 연구 논문 자동 수집 색인">
+<title>Spatial AI - Research</title>
+<meta name="description" content="공간 AI·건설과 조경 BIM·식물 세계모델 논문 자동 수집 색인">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,6 +41,7 @@ header{border-bottom:2px solid var(--line);padding-bottom:1.5rem;margin-bottom:1
 .theme button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:500}
 h1{font-family:"Noto Serif KR",Georgia,serif;font-weight:600;font-size:2rem;margin:0 0 .4rem;
   letter-spacing:-.01em;text-wrap:balance}
+h1 .dash{color:var(--ink-faint);font-weight:400}
 .lede{color:var(--ink-soft);margin:0;font-size:.95rem}
 .meta{color:var(--ink-faint);font-size:.8rem;margin-top:.6rem;font-variant-numeric:tabular-nums}
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.25rem 0 1.75rem}
@@ -68,7 +69,11 @@ details summary::-webkit-details-marker{display:none}
 details summary::before{content:"▸ ";color:var(--ink-faint)}
 details[open] summary::before{content:"▾ "}
 details p{font-size:.86rem;color:var(--ink-soft);margin:.55rem 0 0;
-  max-height:22rem;overflow:auto}
+  max-height:26rem;overflow:auto}
+details details{margin:.6rem 0 0;padding-left:.2rem}
+details details summary{font-size:.78rem;color:var(--ink-faint)}
+details details p{font-size:.82rem;max-height:20rem}
+.loading{font-size:.82rem;color:var(--ink-faint);margin:.55rem 0 0}
 footer{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line);
   color:var(--ink-faint);font-size:.78rem}
 a{color:var(--accent)}
@@ -79,9 +84,9 @@ a{color:var(--accent)}
 <div class="wrap">
 <header>
   <div>
-    <h1>Research Scout</h1>
+    <h1>Spatial AI <span class="dash">—</span> Research</h1>
     <p class="lede">공간 AI·건설과 조경 BIM·식물 세계모델 주변 문헌을 매일 훑어 쌓는 색인입니다.</p>
-    <p class="meta">723편 · 출처 OpenAlex, arXiv · 갱신 2026-09-22 21:04:49 UTC<br>
+    <p class="meta">723편 · 출처 OpenAlex, arXiv · 갱신 2026-09-22 21:16:42 UTC<br>
     초록까지만 수록합니다. 원문은 각 논문의 출판사 링크로 가십시오.</p>
   </div>
   <div class="theme" role="group" aria-label="화면 테마">
@@ -112,9 +117,39 @@ function card(p) {
       ${p.pdf_url ? `<a href="${esc(p.pdf_url)}" target="_blank" rel="noopener">원문 PDF</a>` : ""}
     </div>
     ${authors ? `<div class="bib">${esc(authors)}</div>` : ""}
-    ${p.summary ? `<details><summary>초록</summary><p>${esc(p.summary)}</p></details>` : ""}
+    <details data-id="${esc(p.id)}"><summary>초록</summary>
+      <p class="loading">불러오는 중…</p></details>
   </article>`;
 }
+
+// 초록 전문은 전체 용량의 79%라 따로 둔다. 처음 펼칠 때 한 번만 받아 전부 채운다.
+let ABS = null, absPending = null;
+function loadAbstracts() {
+  if (ABS) return Promise.resolve(ABS);
+  if (!absPending) absPending = fetch("abstracts.json").then(r => r.json()).then(d => (ABS = d));
+  return absPending;
+}
+function fillAbstract(det) {
+  if (det.dataset.filled) return;
+  det.dataset.filled = "1";
+  loadAbstracts().then(all => {
+    const a = all[det.dataset.id] || {};
+    const ko = a.summary_ko, en = a.summary;
+    if (!ko && !en) { det.querySelector("p").textContent = "초록이 없는 논문입니다."; return; }
+    det.querySelector("p").outerHTML =
+      (ko ? `<p>${esc(ko)}</p>` : "") +
+      (en ? `<details><summary>${ko ? "원문 초록 (English)" : "초록 (English)"}</summary>
+             <p>${esc(en)}</p></details>` : "");
+  }).catch(() => {
+    det.dataset.filled = "";
+    const p = det.querySelector("p");
+    if (p) p.textContent = "초록을 불러오지 못했습니다.";
+  });
+}
+document.addEventListener("toggle", ev => {
+  const d = ev.target;
+  if (d.tagName === "DETAILS" && d.open && d.dataset.id) fillAbstract(d);
+}, true);
 function draw() {
   const rows = filter ? PAPERS.filter(p => p.topic === filter) : PAPERS;
   document.getElementById("list").innerHTML = rows.slice(0, 400).map(card).join("") ||
