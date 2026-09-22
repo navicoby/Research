@@ -31,7 +31,14 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{max-width:56rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
-header{border-bottom:2px solid var(--line);padding-bottom:1.5rem;margin-bottom:1.75rem}
+header{border-bottom:2px solid var(--line);padding-bottom:1.5rem;margin-bottom:1.75rem;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem}
+.theme{display:flex;gap:.15rem;border:1px solid var(--line);border-radius:999px;padding:.2rem;
+  background:var(--card);flex:none}
+.theme button{font:inherit;font-size:.78rem;cursor:pointer;border:0;background:transparent;
+  color:var(--ink-faint);border-radius:999px;padding:.28rem .6rem;line-height:1;transition:.15s}
+.theme button:hover{color:var(--ink)}
+.theme button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:500}
 h1{font-family:"Noto Serif KR",Georgia,serif;font-weight:600;font-size:2rem;margin:0 0 .4rem;
   letter-spacing:-.01em;text-wrap:balance}
 .lede{color:var(--ink-soft);margin:0;font-size:.95rem}
@@ -71,17 +78,24 @@ a{color:var(--accent)}
 <body>
 <div class="wrap">
 <header>
-  <h1>Research Scout</h1>
-  <p class="lede">클론식물 세계모델·기능구조 식물모델·조경 BIM 주변 문헌을 매일 훑어 쌓는 색인입니다.</p>
-  <p class="meta">697편 · 출처 OpenAlex, arXiv · 갱신 2026-09-22 20:47:55 UTC<br>
-  초록까지만 수록합니다. 원문은 각 논문의 출판사 링크로 가십시오.</p>
+  <div>
+    <h1>Research Scout</h1>
+    <p class="lede">공간 AI·건설과 조경 BIM·식물 세계모델 주변 문헌을 매일 훑어 쌓는 색인입니다.</p>
+    <p class="meta">723편 · 출처 OpenAlex, arXiv · 갱신 2026-09-22 21:04:49 UTC<br>
+    초록까지만 수록합니다. 원문은 각 논문의 출판사 링크로 가십시오.</p>
+  </div>
+  <div class="theme" role="group" aria-label="화면 테마">
+    <button data-theme="light" aria-pressed="false">밝게</button>
+    <button data-theme="dark" aria-pressed="false">어둡게</button>
+    <button data-theme="auto" aria-pressed="true">자동</button>
+  </div>
 </header>
-<div class="chips"><button class="chip" data-topic="" aria-pressed="true">전체<span class="n">697</span></button><button class="chip" data-topic="world-models">세계모델<span class="n">437</span></button><button class="chip" data-topic="clonal-plant-modeling">클론식물 모델링<span class="n">78</span></button><button class="chip" data-topic="plant-3d-reconstruction">식물 3D 재구성<span class="n">69</span></button><button class="chip" data-topic="plant-digital-twin">식물 디지털트윈<span class="n">42</span></button><button class="chip" data-topic="functional-structural-plant">기능구조 식물모델<span class="n">37</span></button><button class="chip" data-topic="agent-based-ecology">행위자기반 생태<span class="n">25</span></button><button class="chip" data-topic="landscape-bim">조경 BIM<span class="n">9</span></button></div>
+<div class="chips"><button class="chip" data-topic="" aria-pressed="true">전체<span class="n">723</span></button><button class="chip" data-topic="world-models">세계모델<span class="n">443</span></button><button class="chip" data-topic="clonal-plant-modeling">클론식물 모델링<span class="n">79</span></button><button class="chip" data-topic="plant-3d-reconstruction">식물 3D 재구성<span class="n">69</span></button><button class="chip" data-topic="plant-digital-twin">식물 디지털트윈<span class="n">43</span></button><button class="chip" data-topic="functional-structural-plant">기능구조 식물모델<span class="n">37</span></button><button class="chip" data-topic="agent-based-ecology">행위자기반 생태<span class="n">25</span></button><button class="chip" data-topic="spatial-ai">공간 AI<span class="n">12</span></button><button class="chip" data-topic="landscape-bim">조경 BIM<span class="n">9</span></button><button class="chip" data-topic="construction-bim">건설 BIM<span class="n">6</span></button></div>
 <main id="list"></main>
 <footer>arXiv와 OpenAlex 공개 메타데이터로 만들었습니다. 저작권은 각 논문 저작자와 출판사에 있습니다.</footer>
 </div>
 <script>
-const TOPIC_LABEL = {"clonal-plant-modeling": "클론식물 모델링", "functional-structural-plant": "기능구조 식물모델", "plant-3d-reconstruction": "식물 3D 재구성", "world-models": "세계모델", "agent-based-ecology": "행위자기반 생태", "landscape-bim": "조경 BIM", "plant-digital-twin": "식물 디지털트윈"};
+const TOPIC_LABEL = {"clonal-plant-modeling": "클론식물 모델링", "functional-structural-plant": "기능구조 식물모델", "plant-3d-reconstruction": "식물 3D 재구성", "world-models": "세계모델", "agent-based-ecology": "행위자기반 생태", "landscape-bim": "조경 BIM", "plant-digital-twin": "식물 디지털트윈", "construction-bim": "건설 BIM", "spatial-ai": "공간 AI"};
 let PAPERS = [], filter = "";
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function card(p) {
@@ -106,6 +120,19 @@ function draw() {
   document.getElementById("list").innerHTML = rows.slice(0, 400).map(card).join("") ||
     `<article><p>해당 주제의 논문이 아직 없습니다.</p></article>`;
 }
+// 테마: 밝게/어둡게는 root에 data-theme을 찍고, 자동은 지워서 OS 설정을 따른다.
+const themeBtns = document.querySelectorAll(".theme button");
+function setTheme(mode, save) {
+  if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", mode);
+  themeBtns.forEach(b => b.setAttribute("aria-pressed", b.dataset.theme === mode));
+  if (save) { try { localStorage.setItem("theme", mode); } catch (e) {} }
+}
+themeBtns.forEach(b => b.addEventListener("click", () => setTheme(b.dataset.theme, true)));
+let saved = "auto";
+try { saved = localStorage.getItem("theme") || "auto"; } catch (e) {}
+setTheme(saved, false);
+
 document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
   filter = b.dataset.topic;
   document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
