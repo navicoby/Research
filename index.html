@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Scout</title>
+<meta name="description" content="클론식물 세계모델·조경BIM 연구 논문 자동 수집 색인">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d2321; --ink-soft:#55605b; --ink-faint:#8b9691;
+  --bg:#f7f5f0; --card:#fffefb; --line:#e0ddd4;
+  --accent:#4a6b52; --accent-soft:#eaf0ea; --mark:#b5812f;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e7e4dc; --ink-soft:#a7b0aa; --ink-faint:#78827c;
+    --bg:#15181a; --card:#1c2022; --line:#2c3134;
+    --accent:#8fb79a; --accent-soft:#232c26; --mark:#d2a458;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e7e4dc; --ink-soft:#a7b0aa; --ink-faint:#78827c;
+  --bg:#15181a; --card:#1c2022; --line:#2c3134;
+  --accent:#8fb79a; --accent-soft:#232c26; --mark:#d2a458;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:56rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+header{border-bottom:2px solid var(--line);padding-bottom:1.5rem;margin-bottom:1.75rem}
+h1{font-family:"Noto Serif KR",Georgia,serif;font-weight:600;font-size:2rem;margin:0 0 .4rem;
+  letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--ink-soft);margin:0;font-size:.95rem}
+.meta{color:var(--ink-faint);font-size:.8rem;margin-top:.6rem;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.25rem 0 1.75rem}
+.chip{font:inherit;font-size:.82rem;cursor:pointer;border:1px solid var(--line);
+  background:var(--card);color:var(--ink-soft);border-radius:999px;padding:.32rem .8rem;
+  display:inline-flex;align-items:center;gap:.4rem;transition:.15s}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.chip .n{font-size:.72rem;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+article{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:1.15rem 1.25rem;margin-bottom:.8rem}
+article h2{font-size:1.02rem;font-weight:600;margin:0 0 .5rem;line-height:1.45;text-wrap:balance}
+article h2 a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+article h2 a:hover{border-bottom-color:var(--accent)}
+.tldr{border-left:3px solid var(--accent);padding-left:.75rem;margin:0 0 .6rem;
+  color:var(--ink);font-size:.93rem}
+.bib{color:var(--ink-faint);font-size:.78rem;display:flex;flex-wrap:wrap;gap:.5rem;
+  align-items:center;margin-top:.5rem}
+.bib .tag{background:var(--accent-soft);color:var(--accent);padding:.1rem .45rem;border-radius:4px;
+  font-size:.72rem;font-weight:500}
+.oa{color:var(--mark);font-weight:500}
+details summary{cursor:pointer;color:var(--ink-soft);font-size:.82rem;margin-top:.55rem;
+  list-style:none;user-select:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▸ ";color:var(--ink-faint)}
+details[open] summary::before{content:"▾ "}
+details p{font-size:.86rem;color:var(--ink-soft);margin:.55rem 0 0;
+  max-height:22rem;overflow:auto}
+footer{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line);
+  color:var(--ink-faint);font-size:.78rem}
+a{color:var(--accent)}
+@media (max-width:480px){h1{font-size:1.6rem} .wrap{padding-top:1.75rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Research Scout</h1>
+  <p class="lede">클론식물 세계모델·기능구조 식물모델·조경 BIM 주변 문헌을 매일 훑어 쌓는 색인입니다.</p>
+  <p class="meta">697편 · 출처 OpenAlex, arXiv · 갱신 2026-09-22 20:47:55 UTC<br>
+  초록까지만 수록합니다. 원문은 각 논문의 출판사 링크로 가십시오.</p>
+</header>
+<div class="chips"><button class="chip" data-topic="" aria-pressed="true">전체<span class="n">697</span></button><button class="chip" data-topic="world-models">세계모델<span class="n">437</span></button><button class="chip" data-topic="clonal-plant-modeling">클론식물 모델링<span class="n">78</span></button><button class="chip" data-topic="plant-3d-reconstruction">식물 3D 재구성<span class="n">69</span></button><button class="chip" data-topic="plant-digital-twin">식물 디지털트윈<span class="n">42</span></button><button class="chip" data-topic="functional-structural-plant">기능구조 식물모델<span class="n">37</span></button><button class="chip" data-topic="agent-based-ecology">행위자기반 생태<span class="n">25</span></button><button class="chip" data-topic="landscape-bim">조경 BIM<span class="n">9</span></button></div>
+<main id="list"></main>
+<footer>arXiv와 OpenAlex 공개 메타데이터로 만들었습니다. 저작권은 각 논문 저작자와 출판사에 있습니다.</footer>
+</div>
+<script>
+const TOPIC_LABEL = {"clonal-plant-modeling": "클론식물 모델링", "functional-structural-plant": "기능구조 식물모델", "plant-3d-reconstruction": "식물 3D 재구성", "world-models": "세계모델", "agent-based-ecology": "행위자기반 생태", "landscape-bim": "조경 BIM", "plant-digital-twin": "식물 디지털트윈"};
+let PAPERS = [], filter = "";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function card(p) {
+  const authors = Array.isArray(p.authors) ? p.authors.join(", ") : (p.authors || "");
+  const link = p.url || p.doi || "#";
+  return `<article>
+    <h2><a href="${esc(link)}" target="_blank" rel="noopener">${esc(p.title)}</a></h2>
+    ${p.tldr ? `<p class="tldr">${esc(p.tldr)}</p>` : ""}
+    <div class="bib">
+      <span class="tag">${esc(TOPIC_LABEL[p.topic] || p.topic || "")}</span>
+      ${p.venue ? `<span>${esc(p.venue)}</span>` : ""}
+      ${p.published ? `<span>${esc(String(p.published).slice(0,10))}</span>` : ""}
+      ${p.oa ? `<span class="oa">오픈액세스</span>` : ""}
+      ${p.pdf_url ? `<a href="${esc(p.pdf_url)}" target="_blank" rel="noopener">원문 PDF</a>` : ""}
+    </div>
+    ${authors ? `<div class="bib">${esc(authors)}</div>` : ""}
+    ${p.summary ? `<details><summary>초록</summary><p>${esc(p.summary)}</p></details>` : ""}
+  </article>`;
+}
+function draw() {
+  const rows = filter ? PAPERS.filter(p => p.topic === filter) : PAPERS;
+  document.getElementById("list").innerHTML = rows.slice(0, 400).map(card).join("") ||
+    `<article><p>해당 주제의 논문이 아직 없습니다.</p></article>`;
+}
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.topic;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  draw();
+}));
+fetch("papers.json").then(r => r.json()).then(d => { PAPERS = d.papers; draw(); })
+  .catch(() => { document.getElementById("list").innerHTML =
+    `<article><p>목록을 불러오지 못했습니다.</p></article>`; });
+</script>
+</body>
+</html>
