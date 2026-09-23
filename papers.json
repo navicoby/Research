@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-22T22:32:19Z",
- "count": 723,
+ "generated": "2026-09-23T01:30:02Z",
+ "count": 741,
  "topics": {
-  "world-models": 443,
-  "spatial-ai": 12,
+  "world-models": 449,
+  "spatial-ai": 18,
   "clonal-plant-modeling": 79,
   "plant-digital-twin": 43,
-  "construction-bim": 6,
+  "construction-bim": 12,
   "agent-based-ecology": 25,
   "landscape-bim": 9,
   "plant-3d-reconstruction": 69,
@@ -258,6 +258,144 @@
    "tldr": "이 논문은 불확실성 인식 3D Gaussian Splatting SLAM 프레임워크인 BayesianGS-SLAM을 제안한다. 이 방법은 매핑 과정에서 예측되는 색상 및 깊이 불확실성을 추정하여 이를 SLAM 파이프라인(매핑, 추적, 키프레임 선택) 전반에 통합함으로써, 센서 노이즈와 불완전한 맵으로 인한 신뢰도 문제를 개선한다."
   },
   {
+   "id": "arxiv:2609.24352",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.24352v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.24352v1",
+   "oa": true,
+   "title": "Few-Shot Demonstrations Elicit the Use of In-Context World Representations in LLMs",
+   "published": "2026-09-21",
+   "authors": [
+    "Kohsei Matsutani",
+    "Gouki Minegishi",
+    "Core Francisco Park",
+    "Takeshi Kojima",
+    "Yusuke Iwasawa",
+    "Yutaka Matsuo"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 LLM이 그래프 기반 데이터 생성 과정을 이해하고 예측에 활용하는 능력에 초점을 맞춘다. 각기 다른 그래프 토폴로지에서 생성된 소수의 시연(few-shot demonstrations)을 사용했을 때, 모델의 잠재적 세계 표현(world representation)이 재배치되어 예측 성능이 향상됨을 발견했다."
+  },
+  {
+   "id": "arxiv:2609.24313",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.24313v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.24313v1",
+   "oa": true,
+   "title": "NeuIDO: Neural Intrinsic Dynamics Operator for Physics-Informed 4D World Models",
+   "published": "2026-09-21",
+   "authors": [
+    "Jiajing Lin",
+    "Xin Zhang",
+    "Jianhua Sun"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "NeuIDO는 물리 정보 기반 4D 생성 모델이 가진 동역학적 가정의 한계를 극복하기 위해 제안된 새로운 세계 역학 모델링 프레임워크입니다. 이 방법은 시각적 관측으로부터 내재된 동역학 표현을 학습하는 신경 연산자 학습 문제로 정식화하여, 비디오로부터 제로샷(zero-shot)으로 동역학을 추론하고 복잡한 실제 환경 역학에 적응시키는 능력을 입증했습니다."
+  },
+  {
+   "id": "arxiv:2609.24308",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.24308v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.24308v1",
+   "oa": true,
+   "title": "HappyWorld-Bench",
+   "published": "2026-09-21",
+   "authors": [
+    "Zhiqi Bai",
+    "Junai Cai",
+    "Yixin Chen",
+    "Jingrun Du",
+    "Tao Feng",
+    "Wei Gong",
+    "Siyuan Huang",
+    "Xiao Lin",
+    "Jiaheng Liu",
+    "Jun Luo",
+    "Yongzhe Lyu",
+    "Liya Ma"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 생성된 세계 모델의 신뢰성 및 상호작용 반응성을 평가하기 위한 종합 벤치마크인 HappyWorld-Bench를 제안했다. 이 벤치마크는 생성부터 통합 모델링까지의 6가지 능력 프레임워크를 기반으로 비디오, 공간, 신체화된(embodied) 세계 모델 세 가지 독립적인 평가 트랙을 구축했으며, 이를 통해 모델들의 일관성 및 반응성 부족이라는 신뢰성 격차가 발견되었다."
+  },
+  {
+   "id": "arxiv:2609.24048",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.24048v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.24048v1",
+   "oa": true,
+   "title": "What Matters in Designing World Action Models: An Empirical Study",
+   "published": "2026-09-21",
+   "authors": [
+    "Chao Tang",
+    "Haoqing Wang",
+    "Zilang Cen",
+    "Weishi Mi",
+    "Wei Xia",
+    "Fangcheng Liu",
+    "Anda Cheng",
+    "Yeqing Shen",
+    "Xiaohui Cui",
+    "Xiaoyuan Zhang",
+    "Yehui Tang",
+    "Tingguang Li"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "본 연구는 월드 액션 모델(WAM) 설계에서 사용되는 다양한 설계 선택지(인과 구조, 잠재 공간, 학습 목표 등)를 분리하고 체계적으로 분석하기 위해 통제된 실험을 수행했다. 세 가지 대표적인 벤치마크를 사용하여 다양한 설계 변수들을 비교함으로써, 핵심 설계 선택이 모델의 동작 및 성능에 미치는 영향을 체계적으로 이해하고자 했다."
+  },
+  {
+   "id": "arxiv:2609.24033",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.24033v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.24033v1",
+   "oa": true,
+   "title": "Imagine-RL: Residual-Confidence-Guided Cross-Attention for World-Model-Augmented VLA Reinforcement Learning",
+   "published": "2026-09-21",
+   "authors": [
+    "Kejia Hu",
+    "Wentong Zhai",
+    "Bo Zhao",
+    "Shuai Liang"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "Imagine-RL은 기존의 노이즈 공간 강화 학습(RL)에 액션 조건부 시각-토크 상상(imagination)을 추가하여, 미래의 시각적 및 접촉 결과를 평가할 수 있도록 개선했다. 이 방법은 고정된 시각-토크 잠재 세계 모델을 사용하여 미래 예측을 수행하고, 이 예측의 잔차를 활용해 신뢰도가 낮은 미래 토큰을 억제함으로써 액션 비평가(critic)가 후보 액션을 더 잘 평가하고 액터(actor)를 감독하도록 만들었다. 그 결과, Imagine-RL은 기존 방법 대비 평균 성공률을 23.6% 향상시키고 VLA 기준선 대비 60% 향상시키는 성과를 보였다."
+  },
+  {
+   "id": "arxiv:2609.23983",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23983v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23983v1",
+   "oa": true,
+   "title": "Evaluating the Generalization of Neuroimaging Foundation Models on African Brain MRI",
+   "published": "2026-09-21",
+   "authors": [
+    "Oluwatobi Iyanuoluwa Akinmuleya",
+    "Olatokun Shamsudeen Akano",
+    "Samuel Danquah Ankapong",
+    "Olamide Lawal",
+    "Toufiq Musah"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-09-23",
+   "tldr": "서구 코호트로 사전 학습된 신경영상 기반 파운데이션 모델들을 나이지리아 환자 데이터셋을 사용하여 뇌 MRI 진단 분류 작업에 평가했다. 평가 결과, 대부분의 모델(Frozen Backbones)은 다수 클래스 예측에 수렴했으며, 엔드투엔드 학습된 ViT3D 모델만이 더 높은 정확도와 재현율을 보이며 유일하게 유의미한 성능을 달성했다."
+  },
+  {
    "id": "arxiv:2609.23624",
    "source": "arXiv",
    "venue": "arXiv preprint",
@@ -297,6 +435,46 @@
    "tldr": "FlockDiffusion은 장면 그래프 인코더와 할당 조건부 확산 변환기 등을 결합한 학습 프레임워크로, 다중 드론 임무 할당 및 완료를 위해 경로 계획을 개선했습니다. 이 방법은 작업 번들링을 통해 임무 완료율을 50%에서 100%로 높이고, 기존 방식 대비 경로 비용을 8.4% 이상 절감하며, 추론 속도를 6~7배 향상시키는 성능을 보였습니다."
   },
   {
+   "id": "arxiv:2609.23561",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23561v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23561v1",
+   "oa": true,
+   "title": "Transferring Visual Explanations: How Cross-Architecture Knowledge Distillation Affects Model Interpretability",
+   "published": "2026-09-20",
+   "authors": [
+    "Aleks Czufarow",
+    "Ihor Babin"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "이 연구는 지식 증류(Knowledge Distillation)를 통해 큰 모델(ResNet-152)의 공간적 특징 할당을 작은 모델(ResNet-34)로 전이시키는 것이 모델 해석 가능성에 미치는 영향을 조사했다. 다양한 설정에서 정확도와 해석 가능성 지표(Relevance Mass Accuracy, Relevance Rank Accuracy)를 평가한 결과, 해석 가능성은 온도보다 소프트 레이블 가중치에 훨씬 민감했으며, 가중치를 높이면 정확도와 정밀한 국소화 모두 저하되는 경향을 보였다."
+  },
+  {
+   "id": "arxiv:2609.23491",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23491v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23491v1",
+   "oa": true,
+   "title": "Elevator-VIGS: Separating Elevator Motion from Robot Motion in Visual-Inertial Gaussian Splatting SLAM",
+   "published": "2026-09-20",
+   "authors": [
+    "Rui Zhou",
+    "Zihan Zhu",
+    "Wei Zhang",
+    "Zizhou Luo",
+    "Norbert Haala",
+    "Marc Pollefeys"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 엘리베이터 탑승 중 발생하는 시각-관성 센서 간의 충돌 문제를 해결하기 위해 Elevator-VIGS라는 3D Gaussian Splatting SLAM 시스템을 제안했다. 이 시스템은 로봇의 움직임과 엘리베이터의 이동(상승 및 수직 속도)을 분리하여 추정함으로써, 기존 시스템보다 우수한 추적 및 렌더링 성능을 달성했다."
+  },
+  {
    "id": "arxiv:2609.22701",
    "source": "arXiv",
    "venue": "arXiv preprint",
@@ -319,6 +497,101 @@
    "tldr": "이 논문은 자동차 제조 분야에서 자율적인 모델 수명 주기 관리를 위해 폐쇄 루프 사이버-물리 시스템(CPS)을 개발했다. 이 시스템은 디지털 트윈 모델과 강화 학습 제어 정책을 관리하며, 운영자 신뢰도를 반영하는 게이트를 통해 모델 변경을 통제했고, 그 결과 제어된 공정의 안정성이 기존 대비 28~45% 향상되었다."
   },
   {
+   "id": "arxiv:2609.23144",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23144v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23144v1",
+   "oa": true,
+   "title": "Probabilistic Scene Graphs: Hierarchical Representation and Real-time System",
+   "published": "2026-09-19",
+   "authors": [
+    "Waqas Ali",
+    "Michele Antonazzi",
+    "Timon Homberger",
+    "Thien-Minh Nguyen",
+    "Lukas Rosenberger Schmid",
+    "Patric Jensfelt",
+    "Yixi Cai"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "기존의 3D 장면 그래프가 불확실성을 명시적으로 다루지 못하는 문제를 해결하기 위해 확률적 장면 그래프(PSG)를 제안했다. PSG는 가능한 그래프에 대한 사후 확률을 나타내며, 엔티티, 관계, 속성 및 공간적 상태를 분리하고 모든 구성 요소에 걸쳐 불확실성을 유지한다. 특히, 객체 원시체는 완전 공분산 가우시안(Normal-Inverse-Wishart 신념 하에서)으로 모델링된 계층적 가우시안 그래프(HGG)를 사용하여 기하학적 표현을 수행하며, 이를 통해 그래프 구성 및 정제 과정에서 이러한 신념을 보존하는 매핑 파이프라인을 구축했다."
+  },
+  {
+   "id": "arxiv:2609.23038",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23038v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23038v1",
+   "oa": true,
+   "title": "Spatial-Interactor: Learning Spatial Reasoning through Interaction with the Observable Physical World",
+   "published": "2026-09-19",
+   "authors": [
+    "Kaixiang Yao",
+    "Xu Wang",
+    "Miao Pan",
+    "Hu Xiyue",
+    "Weishi Wang",
+    "Daniel Dahlmeier",
+    "Jintao Chen",
+    "Yongliang Shen",
+    "Xuhong Zhang",
+    "Wenqi Zhang"
+   ],
+   "cat": "cs.AI",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 시각-언어 모델(VLM)이 물리적 세계에서 작동하도록 훈련하기 위해 'Spatial-Interactor' 프레임워크를 제안했다. 기존의 정적 학습과 달리, 객체 움직임과 시점 변화를 포함하는 상호작용 궤적을 활용하여 국소적 상태 전환을 직접 지도 학습할 수 있도록 설계했으며, 이를 위해 3단계 커리큘럼과 학습 데이터셋을 구축했다."
+  },
+  {
+   "id": "arxiv:2609.23003",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.23003v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.23003v1",
+   "oa": true,
+   "title": "M3GA-Wild: A Large-Scale Dataset and Benchmark for Multi-Modal Multi-session Ground-to-Aerial Place Recognition in Forests",
+   "published": "2026-09-19",
+   "authors": [
+    "Ethan Griffiths",
+    "Maryam Haghighat",
+    "Simon Denman",
+    "Clinton Fookes",
+    "Milad Ramezani"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 숲에서 지상-항공 간의 다중 모드, 다회차 위치 인식을 위한 최초의 벤치마크 데이터셋인 M3GA-Wild를 제시합니다. 이 데이터셋은 동기화된 RGB 영상과 LiDAR 데이터를 통합하여 다양한 환경 조건에서 시각, LiDAR, 교차 모드, 다중 모드 방법론을 체계적으로 평가할 수 있게 합니다. 실험 결과, LiDAR 기반 접근법이 시각 기반 방법보다 우수했으며, 현재의 다중 모드 융합 전략은 모드 정렬 부족으로 인해 성능 향상에 한계를 보였습니다."
+  },
+  {
+   "id": "arxiv:2609.21804",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.21804v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.21804v1",
+   "oa": true,
+   "title": "VideoReloc: Long-Term Indoor Video Relocalization against a Kilobyte-Scale Semantic Scene Graph",
+   "published": "2026-09-18",
+   "authors": [
+    "Qianru Li",
+    "Xuyang Chen",
+    "Xuqin Wang",
+    "Zhenghao Zhang",
+    "Hongyi Luo",
+    "Tao Wu",
+    "Daniel Cremers",
+    "Lu Liu",
+    "Yanfeng Zhang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-23",
+   "tldr": "VideoReloc은 적응형 클립을 사용하여 장기적인 실내 비디오 재국소화 성능을 향상시켰습니다. 이 방법은 객체 및 움직임 기준에 따라 적응적으로 쿼리 길이를 조정하고, 연결된 클립 간의 증거를 재검토하여 추적 안정성을 높였으며, 이를 통해 클립 기반 추적을 넘어선 정확도를 달성했습니다. 그 결과, 클립 폐쇄(clip closure)를 통해 재국소화 성공률이 크게 향상되었습니다."
+  },
+  {
    "id": "oa:10.1007/s00371-025-04224-w",
    "source": "OpenAlex",
    "venue": "The Visual Computer",
@@ -338,6 +611,65 @@
    "topic": "spatial-ai",
    "added": "2026-09-23",
    "tldr": "Separated-SLAM은 시각-관성 SLAM 프레임워크로, 희소 지도(sparse map)를 평가하여 실시간으로 데이터베이스의 아틀라스(atlas)를 로드하고, 루프 클로저 후에는 아틀라스를 병합하여 추적 모드를 전환합니다. 이 접근 방식은 계산 시간을 평균 30% 단축시키면서도 ORB-SLAM3 수준의 정확도를 유지하며, 특히 단독 추적 모드에서는 프레임당 계산량을 56.9% 절감하는 성능을 보였습니다."
+  },
+  {
+   "id": "oa:10.3390/app152312599",
+   "source": "OpenAlex",
+   "venue": "Applied Sciences",
+   "url": "https://doi.org/10.3390/app152312599",
+   "doi": "10.3390/app152312599",
+   "pdf_url": "https://www.mdpi.com/2076-3417/15/23/12599/pdf?version=1764309216",
+   "oa": true,
+   "title": "Interactive Digital Twin Workflow for Energy Assessment of Buildings: Integration of Photogrammetry, BIM and Thermography",
+   "published": "2025-11-28",
+   "authors": [
+    "Luis Santiago Rojas-Colmenares",
+    "Carlos Rizo-Maestre",
+    "Francisco Gomez‐Donoso",
+    "Pascual Saura-Gómez"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "이 연구는 스마트폰 기반 사진측량, BIM 모델링, 적외선 열화상 분석, 그리고 실시간 시각화 기술을 통합하여 기존 건물의 에너지 평가를 위한 디지털 트윈을 생성하는 저비용 워크플로우를 제시합니다. 이 방법은 고가 장비 없이도 건축가와 엔지니어가 상세한 에너지 진단을 수행할 수 있도록 접근성을 높이며, 이를 통해 기능적인 디지털 트윈 구축 및 데이터 통합의 기술적 기준을 검증했습니다."
+  },
+  {
+   "id": "oa:10.3390/app15189956",
+   "source": "OpenAlex",
+   "venue": "Applied Sciences",
+   "url": "https://doi.org/10.3390/app15189956",
+   "doi": "10.3390/app15189956",
+   "pdf_url": "https://www.mdpi.com/2076-3417/15/18/9956/pdf?version=1757595074",
+   "oa": true,
+   "title": "The Role of Artificial Intelligence in the Transformation of the BIM Environment: Current State and Future Trends",
+   "published": "2025-09-11",
+   "authors": [
+    "Dagmar Kutá",
+    "Michal Faltejsek"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "인공지능(AI)은 빌딩 정보 모델링(BIM) 환경에 프로세스 자동화, 설계 최적화, 건설 프로젝트 효율적 관리를 도입하여 변혁을 유도한다. AI는 설계 단계에서 문제점 식별 및 대안 제시, 건설 단계에서 변경 사항에 대한 신속한 대응, 그리고 운영 및 유지보수 단계에서 방대한 정보를 명확하게 정리하여 시설 관리자에게 제공하는 등 다양한 이점을 제공한다."
+  },
+  {
+   "id": "oa:10.3390/buildings15152621",
+   "source": "OpenAlex",
+   "venue": "Buildings",
+   "url": "https://doi.org/10.3390/buildings15152621",
+   "doi": "10.3390/buildings15152621",
+   "pdf_url": "https://www.mdpi.com/2075-5309/15/15/2621/pdf?version=1753352645",
+   "oa": true,
+   "title": "Advancing Semantic Enrichment Compliance in BIM: An Ontology-Based Framework and IDS Evaluation",
+   "published": "2025-07-24",
+   "authors": [
+    "Tomo Cerovšek",
+    "Mohamed K. Omar"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "이 연구는 BIM 프로젝트의 정보 준수 확인(ICC)을 위해 표준화된 정보 요구사항 관리 체계를 제시합니다. 정보 요구사항을 분류하고 검증 원칙을 연결한 온톨로지(7개 범주)를 구축하고, 이를 기반으로 BIM 도구에 적용 가능한 세 가지 ICC 워크플로우와 IDS 도구 평가 기준을 제안했습니다."
   },
   {
    "id": "oa:10.3390/app15147905",
@@ -380,6 +712,27 @@
    "topic": "spatial-ai",
    "added": "2026-09-23",
    "tldr": "이 논문은 자율 로봇을 위한 비전 기반 내비게이션의 전 과정을 종합적으로 검토한다. 센서 기술의 발전부터 SLAM 기법(희소/밀집), 루프 클로저, LiDAR-비전-관성 융합 등 국소화 방법론, 그리고 강화 학습 기반의 제어 전략까지 다루며, 이를 자율 주행, 산업용 조작, 수중 탐사 등 다양한 응용 분야에 적용하는 사례를 분석한다."
+  },
+  {
+   "id": "oa:10.3390/su17115121",
+   "source": "OpenAlex",
+   "venue": "Sustainability",
+   "url": "https://doi.org/10.3390/su17115121",
+   "doi": "10.3390/su17115121",
+   "pdf_url": "https://www.mdpi.com/2071-1050/17/11/5121/pdf?version=1748941275",
+   "oa": true,
+   "title": "Digital Intelligence in Building Lifecycle Management: A Mixed-Methods Approach",
+   "published": "2025-06-03",
+   "authors": [
+    "J. S. Lai",
+    "Runnan Wan",
+    "Heap‐Yih Chong",
+    "Xiaofeng Liao"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 건설 4.0 프레임워크 하에서 빌딩 수명 주기 관리(BLM)에 적용되는 디지털 지능의 역할을 탐구했다. 체계적 문헌 검토와 계보 분석을 결합한 혼합 연구 방법(mixed-methods)을 사용하여 주요 기술 동인들을 매핑하고, 디지털 지능이 자원 낭비, 안전 위험, 생산성 정체와 같은 산업적 문제를 해결하고 혁신 및 지속 가능한 발전을 촉진하는 통합 모델을 제시했다."
   },
   {
    "id": "oa:10.1080/17538947.2025.2505623",
@@ -491,6 +844,46 @@
    "topic": "construction-bim",
    "added": "2026-09-23",
    "tldr": "건설 분야 디지털 트윈(DTC) 구축을 위해 계획 정보, 실시간 모니터링 데이터, 도출된 지식을 관리할 수 있는 참조 아키텍처와 데이터 스키마를 설계했다. 이 연구는 시맨틱 웹 기술을 활용한 플러그인 기반의 DTC 참조 아키텍처를 제시하여, 건설 실행 단계에서 데이터 기반 의사결정을 지원하고 디지털 트윈 관리를 위한 기반을 마련했다."
+  },
+  {
+   "id": "oa:10.1007/s42452-025-06543-y",
+   "source": "OpenAlex",
+   "venue": "Discover Applied Sciences",
+   "url": "https://doi.org/10.1007/s42452-025-06543-y",
+   "doi": "10.1007/s42452-025-06543-y",
+   "pdf_url": "https://link.springer.com/content/pdf/10.1007/s42452-025-06543-y.pdf",
+   "oa": true,
+   "title": "Review on parametric building information modelling and forward design approaches for sustainable bridge engineering",
+   "published": "2025-02-08",
+   "authors": [
+    "Shanshan Wu",
+    "Mohd Zamri Ramli",
+    "Shek Poi Ngian",
+    "Gen Qiao",
+    "Bolin Jiang"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "이 논문은 교량 공학에서 파라메트릭 BIM 및 포워드 디자인 접근법을 검토했다. 이를 통해 유연한 규칙 기반 모델링을 활용하여 설계 탐색 및 시뮬레이션 기반 최적화를 촉진하고, 초기 계산 정의를 통해 협업 효율성과 비용 통제를 개선하는 방안을 제시했다."
+  },
+  {
+   "id": "oa:10.55248/gengpi.6.0125.0621",
+   "source": "OpenAlex",
+   "venue": "International Journal of Research Publication and Reviews",
+   "url": "https://doi.org/10.55248/gengpi.6.0125.0621",
+   "doi": "10.55248/gengpi.6.0125.0621",
+   "pdf_url": "https://doi.org/10.55248/gengpi.6.0125.0621",
+   "oa": true,
+   "title": "Integrating Building Information Modelling (BIM) for Effective Construction Planning, Execution, and Lifecycle Management",
+   "published": "2025-01-01",
+   "authors": [
+    "Abugu Christian Toochukwu"
+   ],
+   "cat": "article",
+   "topic": "construction-bim",
+   "added": "2026-09-23",
+   "tldr": "건축 정보 모델링(BIM)을 통합하여 프로젝트의 기획, 실행, 수명 주기 관리 전반을 혁신적으로 개선했다. BIM은 설계 단계에서의 간섭 검출을 통해 오류를 줄이고, 실행 단계에서는 자원 최적화를 지원하며, 최종적으로는 예측 유지보수 및 효율적인 자산 관리를 통해 건설 프로젝트의 효율성과 지속 가능성을 향상시킨다."
   },
   {
    "id": "oa:10.3390/buildings14103305",
