@@ -1,15 +1,15 @@
 {
- "generated": "2026-09-28T01:30:00Z",
- "count": 803,
+ "generated": "2026-09-29T01:30:00Z",
+ "count": 818,
  "topics": {
-  "world-models": 478,
-  "spatial-ai": 41,
-  "clonal-plant-modeling": 80,
+  "clonal-plant-modeling": 81,
+  "plant-3d-reconstruction": 70,
+  "world-models": 484,
+  "spatial-ai": 48,
   "plant-digital-twin": 44,
   "construction-bim": 20,
   "agent-based-ecology": 25,
   "landscape-bim": 9,
-  "plant-3d-reconstruction": 69,
   "functional-structural-plant": 37
  },
  "sources": [
@@ -18,6 +18,321 @@
  ],
  "note": "초록까지만 수록. 원문은 각 논문의 출판사 링크로.",
  "papers": [
+  {
+   "id": "arxiv:2609.30816",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.30816v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.30816v1",
+   "oa": true,
+   "title": "Pathways of early evolution from the perspectives of a riboreplisome -- the ultimate RNA machine of life",
+   "published": "2026-09-25",
+   "authors": [
+    "Alice Cleynen",
+    "Archa H. Fox",
+    "Nikolay E. Shirokikh"
+   ],
+   "cat": "q-bio.PE",
+   "topic": "clonal-plant-modeling",
+   "added": "2026-09-29",
+   "tldr": "초기 생명체의 복제와 단백질 합성 기능이 단일 고대 RNA 분자인 리보리플리소옴(riboreplisome)에서 비롯되었다는 가설을 제시했다. 이 모델은 복제와 번역 기구의 상호 의존성을 설명하며, 리보리플리소옴 구조가 유전적 연결성을 유지하고 촉매 생성물을 복제 유전체 근처에 보존함으로써 다른 RNA 혼합물 시나리오보다 6배의 진화적 이점을 제공함을 정량적 모델링으로 입증했다."
+  },
+  {
+   "id": "arxiv:2609.31339",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31339v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31339v1",
+   "oa": true,
+   "title": "ChronoFuseGS: Multi-Temporal Gaussian Fusion with Per-Splat Persistence and Change Visualization",
+   "published": "2026-09-25",
+   "authors": [
+    "Tobias Batik",
+    "Diana Marin",
+    "Peter Kán",
+    "Hannes Kaufmann"
+   ],
+   "cat": "cs.GR",
+   "topic": "plant-3d-reconstruction",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 여러 시점(timestep)에 걸쳐 캡처된 데이터로 재구성된 3D 장면의 변화를 처리하기 위해 다중 시간적 가우시안 스플랫팅(Multi-temporal Gaussian Splatting) 방법인 ChronoFuseGS를 제안합니다. 이 방법은 각 시점의 모델들을 병합하여 장면의 지속적인 부분을 정제하고, 사용자가 지정한 시간 범위에 따라 변화된 부분만을 강조하여 시각화할 수 있는 변경 감지 기반 시각화 기능을 제공합니다."
+  },
+  {
+   "id": "arxiv:2609.31434",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31434v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31434v1",
+   "oa": true,
+   "title": "ExoLaN: Physics-Consistent Context-Aware Dynamics Learning for Exoskeletons",
+   "published": "2026-09-25",
+   "authors": [
+    "Lucas Schulze",
+    "Maximilian Schwarz",
+    "Jona Hoppe",
+    "Jan Peters",
+    "Oleg Arenz"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 인간의 의도 기반 보조 외골격 제어를 위해 상황 인지 능력을 갖춘 Deep Lagrangian Network(DeLaN)인 ExoLaN을 제안했다. ExoLaN은 접촉력 측정 데이터와 시간적 맥락을 결합하여 시스템 역학을 학습하고 상호작용 상황에 적응하며, 이를 통해 기존 방법 대비 토크 추정 오차를 7% 감소시키고 다단계 예측 시 가속도 오차를 59% 이상 줄이는 성능 향상을 보였다."
+  },
+  {
+   "id": "arxiv:2609.31349",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31349v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31349v1",
+   "oa": true,
+   "title": "DyMD: Preserving Interaction Dynamics through Distribution Matching Distillation in Few-Step Video World Models",
+   "published": "2026-09-25",
+   "authors": [
+    "Haojun Xu",
+    "Jie Huang",
+    "Xin Lu",
+    "Mingchen Zhong",
+    "Zihao Fan",
+    "Linjiang Huang",
+    "Si Liu"
+   ],
+   "cat": "cs.CV",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 영상 확산 모델의 몇 단계 샘플링 문제를 해결하기 위해 분포 매칭 증류(DMD) 프레임워크를 개선한 DyMD를 제안한다. DyMD는 시간적 친화도 기반 재노이징 샘플링과 역학 기반의 가짜 점수 추적을 통해 움직임 복구와 시각적 품질을 균형 있게 조정하며, 이를 통해 14B 모델을 4단계의 1.3B 학생 모델로 증류하는 데 성공했다."
+  },
+  {
+   "id": "arxiv:2609.31313",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31313v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31313v1",
+   "oa": true,
+   "title": "Towards VLA-Dreamer: Refining VLA Behavior Using World Models",
+   "published": "2026-09-25",
+   "authors": [
+    "Parsa Mastouri Kashani",
+    "Jan-Gerrit Habekost",
+    "Stefan Wermter"
+   ],
+   "cat": "cs.RO",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "VLA 모델의 데이터 요구량을 줄이고 제어 능력을 향상시키기 위해, 비전 인코더의 임베딩 공간을 기반으로 예측 가능한 월드 모델을 학습하는 새로운 아키텍처를 제안했다. 이 모델은 비손실적인 암시적 월드 모델 역할을 하여, 추론 시 계획(planning)을 수행할 수 있게 함으로써 VLA 모델의 데이터 의존성을 낮추는 것을 목표로 한다."
+  },
+  {
+   "id": "arxiv:2609.31281",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31281v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31281v1",
+   "oa": true,
+   "title": "MA-WAM: Multi-Agent World-Action Model for Test-Time Planning",
+   "published": "2026-09-25",
+   "authors": [
+    "Guowei Zou",
+    "Haitao Wang",
+    "Guoxin Wang",
+    "Beiwen Zhang",
+    "Zhiquan Chen",
+    "Guojie Wang",
+    "Hejun Wu"
+   ],
+   "cat": "cs.AI",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "MA-WAM(Multi-Agent World-Action Model)은 여러 에이전트의 동시적 행동에 따른 상호 의존성을 포착할 수 있도록 설계된 테스트 시간 계획 프레임워크이다. 이 모델은 에이전트 간의 의존성을 고려하여 공동 행동의 결과를 예측하며, 기존 실행 방식 대비 평균 22.0%의 성능 향상을 달성했다."
+  },
+  {
+   "id": "arxiv:2609.31162",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31162v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31162v1",
+   "oa": true,
+   "title": "WorldTS: World Modeling for Multimodal Covariate-aware Time Series Forecasting",
+   "published": "2026-09-25",
+   "authors": [
+    "Yuhan Zhu",
+    "Xiangfei Qiu",
+    "Hanyin Cheng",
+    "Wangmeng Shen",
+    "Chenjuan Guo",
+    "Bin Yang",
+    "Jilin Hu",
+    "Christian S. Jensen"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "WorldTS는 다중 모드 공변량(multimodal covariates)을 직접 통합하여 예측 성능을 향상시키는 월드 모델링 기반 예측 프레임워크이다. 이 방법은 두 단계의 학습 전략을 사용하며, 첫째로 공변량에 조건화된 잠재 상태 역학을 학습하고, 둘째로 학습된 상태 역학을 고정하고 예측된 미래 상태를 실제 관측치로 매핑하는 디코더를 학습시켜 예측 정확도를 개선한다."
+  },
+  {
+   "id": "arxiv:2609.31161",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31161v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31161v1",
+   "oa": true,
+   "title": "I Act Therefore I Am: When Is JEPA's Action-Conditioning Enough to Learn Causal Mechanisms?",
+   "published": "2026-09-25",
+   "authors": [
+    "Yuhang Liu",
+    "Zhuo Huang",
+    "Javen Qinfeng Shi"
+   ],
+   "cat": "cs.LG",
+   "topic": "world-models",
+   "added": "2026-09-29",
+   "tldr": "이 연구는 행동 조건화 예측을 수행하는 결합 임베딩 예측 아키텍처(JEPA)가 관찰된 역학을 유발하는 근본적인 인과 상태를 얼마나 잘 복원할 수 있는지 탐구했다. 저자들은 잠재 변수 모델을 도입하고, 전이 역학 학습과 잠재 상태 보존을 결합한 정보 이론적 목표를 개발했으며, 이 목표 하에서 충분한 행동 유발 변동성이 있을 때 학습된 표현이 실제 인과 상태를 복원할 수 있는 식별 조건(identifiability)을 확립했다."
+  },
+  {
+   "id": "arxiv:2609.31595",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31595v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31595v1",
+   "oa": true,
+   "title": "GraphWrit3R: End-to-End 3D Scene Graph Writing",
+   "published": "2026-09-25",
+   "authors": [
+    "Luka Milivojevic",
+    "Nikola Popovic",
+    "Sayan Deb Sarkar",
+    "Sebastian Koch",
+    "Iro Armeni",
+    "Luc Van Gool",
+    "Danda Pani Paudel"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "GraphWrit3R는 3D 포인트 클라우드나 가우시안 스플랫 데이터를 입력으로 받아, 기존 방법들의 한계를 극복하는 종단간(end-to-end) 방식으로 직접 구조화된 장면 그래프(JSON 스크립트)를 출력하는 방법이다. 이 모델은 다양한 입력 모달리티를 공통의 복셀 그리드에 투영하고 대비 정렬 손실을 통해 융합한 후, 대규모 언어 모델을 이용해 장면 그래프를 생성한다."
+  },
+  {
+   "id": "arxiv:2609.31524",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31524v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31524v1",
+   "oa": true,
+   "title": "Structured Reasoning Agentic Framework for Interpretable Critical View of Safety Assessment",
+   "published": "2026-09-25",
+   "authors": [
+    "Qing Xu",
+    "Yuxiang Luo",
+    "Zhen Chen"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 기존의 블랙박스 방식 평가를 개선하기 위해 Vision-Language Model(VLM)을 활용한 구조적 추론 에이전트 프레임워크인 ReasonCVS를 제안한다. 이 프레임워크는 해부학적 장면 그래프 추상화(ASGA)를 통해 해부학적 요소와 공간적 관계를 구조화하고, 이를 기반으로 LLM을 파인튜닝한 추론 에이전트가 하위 기준을 독립적으로 평가하여 최종 판정을 내리도록 설계되었다."
+  },
+  {
+   "id": "arxiv:2609.31418",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31418v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31418v1",
+   "oa": true,
+   "title": "CognitiveReality: Robot-Agnostic Semantic Gaussian Mapping with an LLM Agent for Immersive Collaborative VR Teleoperation",
+   "published": "2026-09-25",
+   "authors": [
+    "Timofei Kozlov",
+    "Dmitrii Maliukov",
+    "Andrey Marchenko",
+    "Dmitrii Plotnikov",
+    "Miguel Altamirano Cabrera",
+    "Dzmitry Tsetserukou"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "CognitiveReality는 로봇의 RGB-D 스트림을 실시간으로 의미론적 인덱싱된 Gaussian-TSDF 맵으로 변환하여 가상현실(VR) 및 도구 사용 언어 에이전트와 공유합니다. 이 시스템은 다양한 플랫폼에서 작동하는 매퍼 바이너리를 통해 로봇의 자세를 통합하고, 음성 및 컨트롤러 신호를 지속적인 장면 객체에 기반하여 로봇 행동으로 연결하며, 평가 결과 Gaussian-plus-SDF 대비 2~8 dB 성능 향상 및 객체 품질 개선을 입증했습니다."
+  },
+  {
+   "id": "arxiv:2609.31396",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31396v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31396v1",
+   "oa": true,
+   "title": "Augmented Reality Interfaces for Human-Robot Collaboration: Development of a ROS 2-Based Sensor Streaming Framework and Validation via SLAM Algorithms",
+   "published": "2026-09-25",
+   "authors": [
+    "Alessandro Rubert",
+    "Stefano Ghidoni",
+    "Matteo Terreran"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 Magic Leap 2 AR 헤드셋과 ROS 2 생태계를 연결하는 센서 스트리밍 프레임워크를 개발했습니다. 이 프레임워크를 통해 실시간 센서 데이터를 획득하고 ROS 2 토픽으로 발행했으며, SLAM 알고리즘을 사용하여 데이터의 정확도와 안정성을 검증하여 복잡한 인간-로봇 협업 환경에서 안전하고 공유된 공간 인식을 위한 기반을 마련했습니다."
+  },
+  {
+   "id": "arxiv:2609.31357",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31357v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31357v1",
+   "oa": true,
+   "title": "Transformer-based Monte Carlo Localization in Construction Meshes",
+   "published": "2026-09-25",
+   "authors": [
+    "Linus Kramer",
+    "William Talbot",
+    "Olga Vysotska",
+    "Marco Hutter"
+   ],
+   "cat": "cs.RO",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 건설 현장 로봇을 위한 LiDAR 기반의 글로벌 위치 추정 시스템을 제안한다. PointNet++ 인코더와 장소 인식 디코더를 결합하여 Monte Carlo Localization(MCL) 프레임워크에 사용되는 학습된 관측 모델을 구축했으며, 이를 통해 불확실한 환경에서도 견고하게 작동하는 위치 추정 시스템을 개발했다. 실험 결과, 이 방법은 기존 방법들보다 우수한 성능을 보였으며, 합성 데이터로 학습시켜 메시 참조형 글로벌 위치 추정을 구현하는 것이 실용적임을 입증했다."
+  },
+  {
+   "id": "arxiv:2609.31103",
+   "source": "arXiv",
+   "venue": "arXiv preprint",
+   "url": "http://arxiv.org/abs/2609.31103v1",
+   "pdf_url": "https://arxiv.org/pdf/2609.31103v1",
+   "oa": true,
+   "title": "DepthEvidence: Unifying Metric Depth Prediction and Geometric Reasoning in Multimodal Language Models",
+   "published": "2026-09-25",
+   "authors": [
+    "Jiangning Wei",
+    "Yuan Yao",
+    "Miaomiao Cui",
+    "Mingsheng Li",
+    "Humen Zhong",
+    "Shuai Bai",
+    "Zhibo Yang"
+   ],
+   "cat": "cs.CV",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "DepthEvidence는 언어 생성에 객체 기반의 증거로 사용되는 밀집된 기하학적 예측을 통합한 모델이다. 이 모델은 카메라 조건부 디코더를 사용하여 다중 스케일 시각 특징을 통해 정밀한 깊이 정보를 예측하고, 이를 객체 식별자에 고정된 연속적인 기하학 토큰으로 변환하여 언어 생성에 활용한다. 평가 결과, DepthEvidence는 기존 방법론 중 가장 높은 평균 $\\delta_1$ 성능을 달성했으며, 상대 및 기하학적 추론에서 우수한 정확도를 보였다."
+  },
+  {
+   "id": "oa:10.1016/j.robot.2026.105535",
+   "source": "OpenAlex",
+   "venue": "Robotics and Autonomous Systems",
+   "url": "https://doi.org/10.1016/j.robot.2026.105535",
+   "doi": "10.1016/j.robot.2026.105535",
+   "pdf_url": "https://doi.org/10.1016/j.robot.2026.105535",
+   "oa": true,
+   "title": "Semantic Visual Simultaneous Localization and Mapping: A survey on state of the art, challenges, and future directions",
+   "published": "2026-05-16",
+   "authors": [
+    "Thanh Nguyen Canh",
+    "Haolan Zhang",
+    "Xiem HoangVan",
+    "Nak Young Chong"
+   ],
+   "cat": "article",
+   "topic": "spatial-ai",
+   "added": "2026-09-29",
+   "tldr": "이 논문은 로봇 공학 및 컴퓨터 비전 분야에서 중요한 Semantic vSLAM 기술의 현황을 포괄적으로 조사하고 평가합니다. 이를 위해 시각적 SLAM의 발전 과정을 분석하고, 시각적 국소화, 의미 특징 추출, 매핑 등 모듈형 문제 해결 프레임워크를 제안하여 현재의 동향과 주요 난제들을 제시합니다."
+  },
   {
    "id": "arxiv:2609.28654",
    "source": "arXiv",
